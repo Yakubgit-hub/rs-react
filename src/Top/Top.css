@@ -1,0 +1,153 @@
+/* Container for the main layout */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left section where the search bar and Pokemon list are displayed */
+.left-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Right section where the details of the selected Pokemon are displayed */
+.right-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-left: 2px solid #ddd;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Header of the page */
+h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Search bar and result text */
+.loading-text {
+  color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Button styles */
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Pokemon details section */
+.right-section img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+/* List item styles */
+.pokemon-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.pokemon-item:hover {
+  background-color: #f1f1f1;
+}
+
+.pokemon-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.pokemon-item .name {
+  font-size: 18px;
+  color: #333;
+}
+
+.pokemon-item .details-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.pokemon-item .details-button:hover {
+  background-color: #0056b3;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.page-button {
+  padding: 8px 16px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-button:hover {
+  background-color: #bbb;
+}
+
+.page-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    min-width: 100%;
+  }
+}
